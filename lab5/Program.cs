@@ -32,28 +32,7 @@ namespace lab5
 
 
                 // Determine Dice Rolled
-                if (randomNumber == 1 && randomNumber1 == 1)
-                {
-                    Console.WriteLine("SNAKE EYES AND YOU'RE A LOSER!!!");
-
-                }
-                else if (randomNumber + randomNumber1 == 7 || randomNumber + randomNumber1 == 11)
-
-                {
-                    Console.WriteLine("WINNER!!");
-                }
-
-                else if (randomNumber + randomNumber1 == 2 || randomNumber + randomNumber1 == 3|| randomNumber+randomNumber1==12 )
-                {
-                    Console.WriteLine("YOU ARE A LOSER!!");
-
-                }
-
-                else if ( randomNumber == 6 && randomNumber1 == 6)
-                {
-                    Console.WriteLine("BOX CARS");
-
-                }
+                GetRandomInput(randomNumber, randomNumber1);
 
 
                 // Try Again?
@@ -102,6 +81,34 @@ namespace lab5
                 Random random1 = new Random();
                 int randomNumber1 = random1.Next(1, 6);
                 return randomNumber1;
+        }
+
+                public static void GetRandomInput(int randomNumber, int randomNumber1)
+        {
+
+            if (randomNumber == 1 && randomNumber1 == 1)
+            {
+                Console.WriteLine("SNAKE EYES AND YOU'RE A LOSER!!!");
+
+            }
+            else if (randomNumber + randomNumber1 == 7 || randomNumber + randomNumber1 == 11)
+
+            {
+                Console.WriteLine("WINNER!!");
+            }
+
+            else if (randomNumber + randomNumber1 == 2 || randomNumber + randomNumber1 == 3 || randomNumber + randomNumber1 == 12)
+            {
+                Console.WriteLine("YOU ARE A LOSER!!");
+
+            }
+
+            else if (randomNumber == 6 && randomNumber1 == 6)
+            {
+                Console.WriteLine("BOX CARS");
+
+            }
+
         }
     }
 }
